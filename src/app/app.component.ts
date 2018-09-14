@@ -1,7 +1,7 @@
 'use strict'
 import {DataService} from 'src/app/services/data.service'
 import { Component, OnInit } from '@angular/core';
-
+import{Event, NavigationStart, NavigationEnd} from '@angular/router';
 import {
   AuthService,
   GoogleLoginProvider
@@ -17,9 +17,11 @@ import { Router} from '@angular/router';
 export class AppComponent implements OnInit {
   
   title = 'bta';
+ 
 
-
-  constructor( private socialAuthService: AuthService,private router:Router, private dataService : DataService) {}
+  constructor( private socialAuthService: AuthService,private router:Router, private dataService : DataService) {
+ 
+  }
   
   ngOnInit() {
     this.router.navigateByUrl('login');
