@@ -5,7 +5,7 @@ import {Routes, RouterLink, RouterLinkWithHref} from '@angular/router';
 import {RouterModule, Router, ActivatedRoute } from '@angular/router';
 import {FormGroup, FormControl} from '@angular/forms';
 import {DataService} from 'src/app/services/data.service'
-
+import{Event, NavigationStart, NavigationEnd} from '@angular/router';
 import { Subscriber } from 'rxjs';
 
 
@@ -32,12 +32,20 @@ date=DataService.JSONObj.date;
  
  
   static dataObj = { };
+  showLoadingIndicator = true;
 
 
   constructor(private router: Router ,
               private route: ActivatedRoute,
               private http: HttpClient,
-              private dataService : DataService) { }
+              private dataService : DataService) { 
+                this.router.events.subscribe((routerEvent: Event) => {
+                  if(routerEvent instanceof NavigationStart){
+                    this.showLoadingIndicator = true;
+                    
+                  }
+                   });
+              }
 
   ngOnInit(){
 
