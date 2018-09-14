@@ -1,0 +1,62 @@
+
+<div class="container">
+  <div id="row-2" class="row" style="background-color:white">
+    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+      <button type="button" class="btn btn-light" id="back_button" [routerLink]="['/login']"><b><i class="fa fa-angle-left" id="back_button_logo" style="font-size:24px"></i></b> </button>
+    </div>
+    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-5 col-7">
+      <span id="src" style="color: #000;">{{source}}</span><i class="fa fa-arrow-right" id="arrow"></i><span id="dst" style="color: #000;">{{destination}}</span>
+    </div> 
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+      <span id="choosen_date" style="color: #000">{{date}}</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+      <button type="button" class="btn btn-primary" id="modify_button" [routerLink]="['/login']">Modify Search</button>
+    </div>
+    <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+      <div class="icons">
+        <button type="button" class="btn btn-link" [routerLink]="['/login/dashboard/sorting']">
+         <i class="fa fa-sort" id= "sort_icon"  style="font-size:24px"></i>
+        </button>
+        <button type="button" class="btn btn-link" [routerLink]="['/login/dashboard/filter']" >
+          <i class="fa fa-filter" id= "filter_icon" style="font-size:24px"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container content" *ngFor="let user of data">
+  <div class="row ">
+    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 col-5 content_column">
+      <div class="row"><b>{{user.TravelsName}}</b></div>
+      <div class="row">{{user.busCondition | uppercase}}</div>
+      <div class="row">{{user.departureTime}}-{{user.ArrivalTime}}({{user.duration}})</div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-2 col-sm-2 col-2 seats_available">
+      {{user.SeatsAvailable}}
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 col-5 price_column">
+      <div ><button type="button" class="btn btn-light" id="fare_button">{{user.fare}}</button></div>
+      <div > aj </div>
+      <div > <button type="button" class="btn btn-light" id="fare_button">more<i class="fa fa-caret-down" style="font-size:24px"></i></button> </div>
+    </div>
+  </div>
+</div>
+     
+ 
+
+ 
+  
+

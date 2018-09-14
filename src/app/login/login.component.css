@@ -1,0 +1,86 @@
+@import "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.bundle.css";
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+
+.form-check{
+    color: black;
+    position: relative;
+    left: 45%;
+    top: 10px;
+    font-size: medium;
+    
+}
+
+
+.form-check-inline{
+    position: absolute;
+    top:15%;
+    margin-left: 2%;
+}
+
+
+.form-control{
+    position: relative;
+    top: 15px;
+
+}
+
+
+#submit{
+    position: relative;
+    left: 8%;
+    top: 15px;
+    background-color: rgb(253, 152, 0);
+    border-color:  rgb(253, 152, 0);
+    color: #000;
+}
+
+
+#h{
+    color: red;
+}
+
+
+#source {
+    border-bottom-color: black ;
+    border-top: none ;
+    border-left: none ;
+    border-right:  none ;
+    background: transparent;
+}
+
+
+#destination {
+    border-bottom-color: black ;
+    border-top: none ;
+    border-left: none ;
+    border-right:  none ;
+    background: transparent;
+}
+
+
+#arrival{
+    border-bottom-color: black ;
+    border-top: none ;
+    border-left: none ;
+    border-right:  none ;
+    background: transparent;
+}
+
+
+#departure{
+    border-bottom-color: black ;
+    border-top: none ;
+    border-left: none ;
+    border-right:  none ;
+    background: transparent;
+}
+
+
+#calender_logo{
+    position: relative;
+    top:30%;
+    color: #000;
+}
+
+
+
