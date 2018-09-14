@@ -57,65 +57,74 @@ export class LoginComponent implements OnInit {
   }
 
  }
-    validation()
-  {  
-     var s=<HTMLInputElement>document.getElementById("source");
-     var d=<HTMLInputElement>document.getElementById("destination");
-     var t=<HTMLInputElement>document.getElementById("departure");
+  validation(){
+    var s=<HTMLInputElement>document.getElementById("source");
+    var d=<HTMLInputElement>document.getElementById("destination");
+    var t=<HTMLInputElement>document.getElementById("departure");
 
-     var auto_source = s.value.split(",");
-     s.value = auto_source[0];
+    var auto_source = s.value.split(",");
+    s.value = auto_source[0];
 
-     var auto_destination = d.value.split(",");
-     d.value = auto_destination[0];
-   
-     DataService.JSONObj.source = s.value;
-     DataService.JSONObj.destination = d.value;
-     DataService.JSONObj.date = t.value;
-      localStorage.setItem("source",s.value);
-      localStorage.setItem("destination",d.value);
-     
-      // var today = new Date();
-      // var dd = today.getDate();
-      // var mm = today.getMonth()+1; //January is 0!
-      // var yyyy = today.getFullYear();
+    var auto_destination = d.value.split(",");
+    d.value = auto_destination[0];
 
-      // // if(dd<10) {
-      // //     dd = '0'+dd;
-      // // } 
-      
-      // // if(mm<10) {
-      // //     mm = '0'+mm;
-      // // } 
-      
-      // // today = yyyy + '-' + mm + '-' + dd;
-      // // console.log(typeof(today));
-      // // console.log(typeof(DataService.JSONObj.date));
+    DataService.JSONObj.source = s.value.toLowerCase();
+    DataService.JSONObj.destination = d.value.toLowerCase();
+    DataService.JSONObj.date = t.value;
+    localStorage.setItem("source",s.value);
+    localStorage.setItem("destination",d.value);
+  
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    var cdd = String(dd);
+    var cmm = String(mm);
+    var today_date;
+
+    if(dd<10) {
+      cdd = '0'+dd;
+    } 
     
+    if(mm<10) {
+      cmm = '0'+mm;
+    } 
+    
+    today_date = yyyy + '-' + cmm + '-' + cdd;
+
 
     if((DataService.JSONObj.source == "") || (DataService.JSONObj.destination =="") || (DataService.JSONObj.date =="")){
-      
+    
       var h=<HTMLBodyElement>document.getElementById("h");
       h.innerText="* Please fill all the fields";
       this.router.navigateByUrl('login');
-      
+    
     }
     else{
-    
-     if((DataService.JSONObj.source ) == (DataService.JSONObj.destination )){
 
-       var h=<HTMLBodyElement>document.getElementById("h");
-       h.innerText="* Destination cannot be same as source";
-       this.router.navigateByUrl('login');
-     }
-     
+      if((DataService.JSONObj.source ) == (DataService.JSONObj.destination )){
+
+        var h=<HTMLBodyElement>document.getElementById("h");
+        h.innerText="* Destination cannot be same as source";
+        this.router.navigateByUrl('login');
+  }
+  
+  else{
+    if(today_date > DataService.JSONObj.date){
+      console.log("aaaa");
+      var h=<HTMLBodyElement>document.getElementById("h");
+      h.innerText="* Departure date can not be past date";
+      this.router.navigateByUrl('login');
+  }
+
     else{
       DataService.guarding = true;
       this.router.navigateByUrl('login/dashboard');
-      
     }
-    }
+  }
 
     
+  
+    }
   }
 }
