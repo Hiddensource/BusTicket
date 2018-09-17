@@ -29,18 +29,18 @@ constructor(private http:HttpClient) {
 public postData () {
 
  var mystring = DataService.JSONObj.date;
-mystring = mystring.replace('-',''); 
+ mystring = mystring.replace('-',''); 
 
  var ddate=mystring.replace('-','');
 
-  var busParameters = {
+ var busParameters = {
   "source":DataService.JSONObj.source,
   "destination":DataService.JSONObj.destination,
   "ddate": ddate
 };
 
 
-return this.http.post('http://localhost:3000/getBus', busParameters )
+return this.http.post('http://172.16.17.209:4000/getBus', busParameters )
   
 }
 

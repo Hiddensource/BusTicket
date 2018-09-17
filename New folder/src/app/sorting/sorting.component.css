@@ -1,0 +1,48 @@
+#src{
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 1%;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+#dst{   
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 6%;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+#arrow{
+    position: relative;
+    top: 20px;
+    left: 4%;
+    font-weight: 100;
+    margin-bottom: 2px;
+}
+
+#choosen_date{
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 10%;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+#back_button{
+    position: relative;
+    padding-left: 10%;
+    top: 25%;
+    margin-bottom: 2px;
+}
+
+#back_button_logo{
+    position: relative;    
+    margin-bottom: 1px;
+}

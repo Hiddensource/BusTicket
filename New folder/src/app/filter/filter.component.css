@@ -1,0 +1,42 @@
+#src{
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 1%;
+    font-weight: 600;
+}
+
+#dst{   
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 6%;
+    font-weight: 600;
+}
+
+#arrow{
+    position: relative;
+    top: 20px;
+    left: 4%;
+    font-weight: 100;
+}
+
+#choosen_date{
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 10%;
+    font-weight: 600;
+}
+#back_button{
+    position: relative;
+    padding-left: 10%;
+    top: 25%;
+}
+
+#back_button_logo{
+    position: relative;    
+}

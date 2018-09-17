@@ -1,0 +1,48 @@
+
+#header{
+    background:rgb(12, 149, 173);
+    height: 75px;
+}
+#user_logo{
+    color: black;
+    position: absolute;
+    top: 25px;
+    left: 87%;
+
+}
+#heading{
+    position: relative;
+    left: 1px;
+    top: 15px;
+}
+.btn-link{
+    
+    color: black;
+    position: absolute;
+    top: 20px;
+    left: 88%;
+    height: 40px;
+    width: 80px;
+}
+#collaps{
+    color: black;
+    position: absolute;
+    top: 20px;
+    left: 75%;
+    height: 40px;
+    width: 80px;
+
+}
+.btn-info{
+    background: black;
+    position: relative;
+    top: 15%;
+    
+    right: 0%;
+    height: 40px;
+    width: 80px;
+}
+
+
+
+
