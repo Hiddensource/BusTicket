@@ -1,0 +1,64 @@
+<div class="container" >
+  <div class="row" id="first_row">
+    <div class="col-xl-2 col-lg-2 col-sm-12 col-md-12" >
+      <div class="row">
+        <div class="form-check">
+          <label class="form-check-label" for="radio1">
+            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>One-Way
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-check">
+          <label class="form-check-label" for="radio2">
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Two-Way
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+      <div class="form-group">
+      
+        <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddresChange($event)" placeholder="Source" id="source" class="form-control" required/>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6" >
+      <div class="form-group">
+        <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddresChange($event)" placeholder="Destination" id="destination" class="form-control" required/>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6"> 
+      <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+          <i class="fa fa-calendar fa-2x" id="calender_logo"></i>
+        </div>
+        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 form-group">
+          <input type="date" class="form-control" placeholder="Date" name="text2" id="departure">
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6"> 
+      <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+          <i class="fa fa-calendar fa-2x" id="calender_logo"></i>
+        </div>
+        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 form-group">
+          <input type="date" class="form-control" placeholder="Date" name="text2" id="arrival" disabled>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span id="h" ></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col">
+      <input type="submit" class="btn btn-info" value="Search" (click)="validation()" id="submit">
+    </div>
+  </div>  
+</div> 
+
+
+
+

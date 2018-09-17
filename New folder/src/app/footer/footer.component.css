@@ -1,0 +1,18 @@
+.footer {
+    position: fixed;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background:rgb(12, 149, 173);
+    color: white;
+    text-align: center;
+    z-index: 999;
+    opacity: 100;
+}
+.text{
+    COLOR: #000000;
+FONT-FAMILY: Poppins;
+FONT-SIZE: 12PX;
+text-align:left;
+}
