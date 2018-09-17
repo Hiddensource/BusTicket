@@ -4,7 +4,7 @@
 <!-- <app-login></app-login> -->
 <a routerLink="./login"></a>
 <button id="btn" (click)="socialSignIn('google')"><i class="fa fa-google" style="font-size:24px; color: rgb(53, 178, 250)"></i>Sign In</button>  
-<a href="/login" id="Log-out" hidden>Log Out</a>    
+<button (click)="logout()" id="Log-out" hidden>Log Out</button>      
 
 <app-footer></app-footer>
 

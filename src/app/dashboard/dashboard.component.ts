@@ -30,6 +30,8 @@ export class DashboardComponent implements OnInit {
 source=DataService.JSONObj.source;
 destination=DataService.JSONObj.destination;
 date=DataService.JSONObj.date;
+bustype= DataService.busType;
+seattype = DataService.seatType;
 
  
   static dataObj = { };
@@ -49,22 +51,31 @@ date=DataService.JSONObj.date;
               }
 
   ngOnInit(){
-
+    if(DataService.flag == 0){
     this.dataService.postData()
     .subscribe(data => {
       
      console.log("object", data['Detail']);
      DashboardComponent.dataObj = data['Detail'];
      this.data =  DashboardComponent.dataObj;
-     this.showLoadingIndicator = false;
-    if(DataService.dataSort[1] != null)
+     DataService.dataFilter = this.data;
+    this.showLoadingIndicator = false;
+    DataService.flag = 1;
+     });
+    }
+    else{
+      this.data = DataService.dataFilter;
+      this.showLoadingIndicator = false;
+    }
+     if(DataService.dataSort[0] != null)
     {
       this.data =  DataService.dataSort;
+      this.showLoadingIndicator = false;
     }
     if(DashboardComponent.dataObj == 0){
      this.router.navigateByUrl('login');
+     this.showLoadingIndicator = false;
     }
-     });
          
   }
 

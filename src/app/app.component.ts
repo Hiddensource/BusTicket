@@ -25,6 +25,12 @@ export class AppComponent implements OnInit {
   
   ngOnInit() {
     this.router.navigateByUrl('login');
+    if(sessionStorage.getItem('username')!= null){
+      var btn=<HTMLBodyElement>document.getElementById("btn");
+      btn.innerText=sessionStorage.getItem('username'); 
+      var logout=<HTMLButtonElement>document.getElementById("Log-out");
+      logout.hidden=false;
+    }
   }
 
   public socialSignIn(socialPlatform : string) {
@@ -40,11 +46,17 @@ export class AppComponent implements OnInit {
         btn.innerText=userData.name;
         var logout=<HTMLAnchorElement>document.getElementById("Log-out");
         logout.hidden=false;
-               
+        sessionStorage.setItem('username',userData.name);     
       }
     );
   }
- 
+  logout(){
+   
+    sessionStorage.clear();
+    this.router.navigateByUrl('login');
+    location.reload();
+    
+  } 
 
 }
 
