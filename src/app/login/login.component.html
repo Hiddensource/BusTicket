@@ -19,12 +19,12 @@
     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
       <div class="form-group">
       
-        <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddresChange($event)" placeholder="Source" id="source" class="form-control" required/>
+        <input autocomplete="on" placeholder="Source" id="source" class="form-control" required/>
       </div>
     </div>
     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6" >
       <div class="form-group">
-        <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddresChange($event)" placeholder="Destination" id="destination" class="form-control" required/>
+        <input autocomplete1="on" placeholder="Destination" id="destination" class="form-control" required/>
       </div>
     </div>
     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6"> 

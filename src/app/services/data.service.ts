@@ -10,13 +10,18 @@ import {Observable} from 'rxjs/Observable';
 
 export class DataService {
   static guarding=false;
-
+  static time = null;
+static busCategory = null;
+static busType = null;
+static seatType = null;
+static flag;
  
 static JSONObj = {"source":" ", "destination": " ", "date": " " };
 
 dataObj = {};
   
 static dataSort = { };
+static dataFilter = {};
 
 private url: string;
 
@@ -40,7 +45,7 @@ mystring = mystring.replace('-','');
 };
 
 
-return this.http.post('http://localhost:3000/getBus', busParameters )
+return this.http.post('http://172.16.17.179:3000/getBus', busParameters )
   
 }
 

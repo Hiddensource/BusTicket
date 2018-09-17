@@ -120,6 +120,7 @@ export class LoginComponent implements OnInit {
     else{
       DataService.guarding = true;
       this.router.navigateByUrl('login/dashboard');
+      DataService.flag=0;
     }
   }
 

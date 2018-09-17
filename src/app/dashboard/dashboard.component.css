@@ -69,31 +69,36 @@
     position: relative;    
 }
 .content{
-    color: black;
-    margin-bottom: 9px;
-    background-color:rgb(232, 234, 234);
-    width: 93%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 10px;
 
 }
+.content_data{
+  background-color:rgb(232, 234, 234);
+  /* padding-top: 5px; */
+  /* padding-bottom: 5px; */
+  color: black;
+  padding-left: 15px;
+  margin-bottom: 9px;
+  border-radius: 10px;
+}
+
 .content_column{
     position: relative;
     left: 10px;
 }
 .seats_available{
-    position: relative;
-    left: 10%;  
+  text-align: left; 
+  padding-right: 0px;
+  padding-top: 5px;
 
 }
 .price_column{
    text-align: center;
+   padding: 0px;
 }
-#fare_button{
+/* #fare_button{
     background-color:rgb(232, 234, 234);
     border-color: rgb(232, 234, 234);
-}
+} */
 .fa-caret-down{
     top: 4px;
 

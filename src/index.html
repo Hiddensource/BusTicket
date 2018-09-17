@@ -8,10 +8,22 @@
         <link rel="icon" type="image/x-icon" href="/assets/images/BTA.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsRSttCLGYwYSsVe4akk6-eGQaYZcS2jA&libraries=places&sensor=false&language=en"></script>
-        
-        
-
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"  type="text/javascript"></script>
+        <script type="text/javascript">
+        function initialize() {
+         var options = {
+        types: ['(cities)'],
+         componentRestrictions: {country: "in"}
+        };
+        var input = document.getElementById('source');
+        var input1 = document.getElementById('destination');
+        var autocomplete = new google.maps.places.Autocomplete(input,
+        options);
+         var autocomplete1 = new google.maps.places.Autocomplete(input1,
+        options);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+         </script>
     </head>
 <body>
 <app-root></app-root>
