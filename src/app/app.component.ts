@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
         btn.innerText=userData.name;
         var logout=<HTMLAnchorElement>document.getElementById("Log-out");
         logout.hidden=false;
+      
         sessionStorage.setItem('username',userData.name);     
       }
     );

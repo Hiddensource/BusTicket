@@ -32,6 +32,7 @@ import {
 } from "angular5-social-login";
 import { SortingComponent } from './sorting/sorting.component';
 import { FilterComponent } from './filter/filter.component';
+import { NomanslandComponent } from './nomansland/nomansland.component';
 
 
 
@@ -56,7 +57,8 @@ return config;
     FooterComponent,
     DashboardComponent,
     SortingComponent,
-    FilterComponent
+    FilterComponent,
+    NomanslandComponent
   ],
   imports: [
     //MatTableModule,
@@ -85,7 +87,12 @@ return config;
        component:SortingComponent,
        canActivate: [AuthGuard]
             },
-
+            {
+              path: 'login/nomansland',
+              component:NomanslandComponent,
+                canActivate: [AuthGuard]
+            
+                  },
              {
   path: 'login/dashboard',
   component:DashboardComponent,

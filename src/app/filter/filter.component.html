@@ -23,22 +23,22 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light" (click)="time_filter('00-06')" >
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('00-06,time')" id="00-06" >
                 00-06
               </button>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light" (click)="time_filter('06-12')" >
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('06-12,time')" id="06-12">
                 06-12
               </button>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light" (click)="time_filter('12-18')" >
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('12-18,time')" id="12-18" >
                 12-18
               </button>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light" (click)="time_filter('18-24')" >
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('18-24,time')" id="18-24" >
                 18-24
               </button>
         </div>
@@ -49,14 +49,19 @@
     
       <div class="row">
        
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-          <button type="button" class="btn btn-light" (click)="busCategory_filter('Volvo')">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+          <button type="button" class="btn btn-light" (click)="busType_filter('VOLVO')">
             Volvo
           </button>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">      
-          <button type="button" class="btn btn-light" (click)="busCategory_filter('Janrath')" >
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+          <button type="button" class="btn btn-light" (click)="busType_filter('JAN')" >
             Janrath
+          </button>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+          <button type="button" class="btn btn-light" (click)="busType_filter('SCANIA')" >
+            Scania
           </button>
         </div>
       </div>
@@ -68,12 +73,12 @@
       <div class="row">
        
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-            <button type="button" class="btn btn-light" (click)="busType_filter('ac')" >
+            <button type="button" class="btn btn-light" (click)="busCondition_filter('ac')" >
               AC
             </button>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">      
-            <button type="button" class="btn btn-light" (click)="busType_filter('nonac')">
+            <button type="button" class="btn btn-light" (click)="busCondition_filter('nonac')">
               NON AC
             </button>
           </div>
