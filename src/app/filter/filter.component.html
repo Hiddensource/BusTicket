@@ -18,27 +18,52 @@
 <br>
 <br>
 
-
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light price" (click)="price_filter_function('00-1500')"  >
+                &lt; &#8377;1.5K
+              </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light price" (click)="price_filter_function('1500-3000')" >
+                &#8377;1.5K-&#8377;3K
+              </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light price" (click)="price_filter_function('3000-4500')" >
+                &#8377;3K-&#8377;4.5K
+              </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light price" (click)="price_filter_function('4500-20000')"  >
+                &gt; &#8377;4.5k
+              </button>
+        </div>
+        
+      
+      </div> 
+    <hr>  -->
 
 <div class="container">
     <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light time" (click)="time_filter_function('00-06,time')" id="00-06" >
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('00-06','time')" id="00-06" >
                 00-06
               </button>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light time" (click)="time_filter_function('06-12,time')" id="06-12">
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('06-12','time')" id="06-12">
                 06-12
               </button>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light time" (click)="time_filter_function('12-18,time')" id="12-18" >
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('12-18','time')" id="12-18" >
                 12-18
               </button>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-            <button type="button" class="btn btn-light time" (click)="time_filter_function('18-24,time')" id="18-24" >
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('18-24','time')" id="18-24" >
                 18-24
               </button>
         </div>
@@ -49,61 +74,67 @@
     
       <div class="row">
        
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-          <button type="button" class="btn btn-light" (click)="busType_filter('VOLVO')">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+              <button type="button" class="btn btn-light busType" (click)="busType_filter('VOLVO','busType')" id="VOLVO">
             Volvo
           </button>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-          <button type="button" class="btn btn-light" (click)="busType_filter('JAN')" >
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light busType" (click)="busType_filter('JAN','busType')" id="JAN">
             Janrath
           </button>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-          <button type="button" class="btn btn-light" (click)="busType_filter('SCANIA')" >
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light busType" (click)="busType_filter('SCANIA','busType')" id="SCANIA">
             Scania
           </button>
         </div>
+
+         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light busType" (click)="busType_filter('other','busType')" id="other">
+            Others
+          </button>
+        </div> 
       </div>
     <hr>
 
 
 
     
-      <div class="row">
+    <div class="row">
        
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-            <button type="button" class="btn btn-light" (click)="busCondition_filter('ac')" >
-              AC
-            </button>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">      
-            <button type="button" class="btn btn-light" (click)="busCondition_filter('nonac')">
-              NON AC
-            </button>
-          </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+          <button type="button" class="btn btn-light busCondition" (click)="busCondition_filter('ac','busCondition')" id="ac">
+            AC
+          </button>
         </div>
-        <hr>
-    
-        <div class="row">
-       
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-              <button type="button" class="btn btn-light" (click)="seatType_filter('Sleeper')">
-                Sleeper
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">      
+          <button type="button" class="btn btn-light busCondition" (click)="busCondition_filter('nonac','busCondition')" id="nonac">
+            NON AC
+          </button>
+        </div>
+      </div>
+      <hr>
+  
+      <div class="row">
+     
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+            <button type="button" class="btn btn-light seatType" (click)="seatType_filter('Sleeper','seatType')" id="Sleeper">
+              Sleeper
+            </button>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+              <button type="button" class="btn btn-light seatType" (click)="seatType_filter('Seater','seatType')" id="Seater">
+                Seater
               </button>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                <button type="button" class="btn btn-light" (click)="seatType_filter('Seater')">
-                  Seater
+                <button type="button" class="btn btn-light seatType" (click)="seatType_filter('Seater/Sleeper','seatType')" id="Seater/Sleeper">
+                  Seater/Sleeper
                 </button>
               </div>
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                  <button type="button" class="btn btn-light" (click)="seatType_filter('Seater/Sleeper')">
-                    Seater/Sleeper
-                  </button>
-                </div>
-          </div>
-        <hr>
+        </div>
+      <hr>
 </div>
 <div class="container submit_reset">
 

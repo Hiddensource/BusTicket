@@ -17,15 +17,17 @@ var bus_json ={};
 
 export class DashboardComponent implements OnInit {
   public data : any
-
   source=DataService.JSONObj.source;
   destination=DataService.JSONObj.destination;
   date=DataService.JSONObj.date;
   buscondition= DataService.busCondition;
   seattype = DataService.seatType;
   bustype = DataService.busType;
- 
- 
+  busDepartureTimeMin =DataService.departureTimeMin;
+  busDepartureTimeMax =DataService.departureTimeMax;
+  static counter = 0;
+  counter1 = 0;
+  
   static dataObj = { };
   showLoadingIndicator = true;
 
@@ -45,7 +47,8 @@ export class DashboardComponent implements OnInit {
               }            
 
   ngOnInit(){
-   
+    this.counter1=0;
+    DashboardComponent.counter=0;
     if(DataService.flag == 0)
     {
       this.dataService.postData()
@@ -55,7 +58,6 @@ export class DashboardComponent implements OnInit {
       DashboardComponent.dataObj = data['Detail'];
       this.data =  DashboardComponent.dataObj;
       DataService.dataFilter = this.data;
-      console.log(DashboardComponent.dataObj);
       this.showLoadingIndicator = false;
       DataService.flag = 1;
       if(DashboardComponent.dataObj[0] == null)
@@ -120,6 +122,15 @@ export class DashboardComponent implements OnInit {
     window.location.href = url1;
   }
 
+  count12(){
+    
+    this.counter1 = this.counter1 +1;
+    DashboardComponent.counter = this.counter1;
+    //console.log(DashboardComponent.counter,"dawadswawdesawdaxawd",this.counter1);
+  }
+  count123(){
+    console.log(DashboardComponent.counter,"out");
+  }
 
 }
 

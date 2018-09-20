@@ -11,12 +11,14 @@ import { DashboardComponent } from 'New folder/src/app/dashboard/dashboard.compo
 
 export class DataService {
   static guarding=false;
-  static time = null;
+  static departureTime = null; // departure time
+  static departureTimeMin = null;
+  static departureTimeMax = null;
   static busType = null; // volvo jan rath scania
   static busCondition = null; //ac non ac
   static seatType = null;// sleeper seater semi-seater
   static flag;
-  
+ 
   static JSONObj = {"source":" ", "destination": " ", "date": " ", "return_date": " " };
 
   dataObj = {};

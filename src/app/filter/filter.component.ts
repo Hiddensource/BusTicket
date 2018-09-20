@@ -19,42 +19,68 @@ date=DataService.JSONObj.date;
  
  
   ngOnInit() {
+    if(DataService.busCondition!=  null || DataService.busType!=null || DataService.seatType!=null || DataService.departureTime!=null){
+      if(DataService.busCondition!=  null){
+        document.getElementById(DataService.busCondition).style.background = "rgb(253, 152, 0)";
+      }
+      if(DataService.busType!=  null){
+        document.getElementById(DataService.busType).style.background = "rgb(253, 152, 0)";
+      }
+      if(DataService.seatType!=  null){
+        document.getElementById(DataService.seatType).style.background = "rgb(253, 152, 0)";
+      }
+      if(DataService.departureTime!=  null){
+        document.getElementById(DataService.departureTime).style.background = "rgb(253, 152, 0)";
+      }
+    }
   }
+  
       
   time_filter_function(bus_time,filter_class){
     this.color_reset(filter_class);
-    DataService.time = bus_time;   
+    DataService.departureTime = bus_time;
+    DataService.departureTimeMin = parseInt(bus_time.split("-")[0]);
+    DataService.departureTimeMax = parseInt(bus_time.split("-")[1]);      
+ 
     document.getElementById(bus_time).style.background = "rgb(253, 152, 0)";
         }
-  busType_filter(bus_category){
+   busType_filter(bus_category,filter_class){
+    this.color_reset(filter_class);
     DataService.busType = bus_category;
-        }
-  busCondition_filter(bus_condition){
+    document.getElementById(bus_category).style.background = "rgb(253, 152, 0)";
+  }
+
+  busCondition_filter(bus_condition,filter_class){
+    this.color_reset(filter_class);
     DataService.busCondition = bus_condition;
+    document.getElementById(bus_condition).style.background = "rgb(253, 152, 0)";
   }
-  seatType_filter(seat_type){
+
+  seatType_filter(seat_type,filter_class){
+    this.color_reset(filter_class);
     DataService.seatType = seat_type;
+    document.getElementById(seat_type).style.background = "rgb(253, 152, 0)";
   }
-  busQuality_filter(bus_quality){
-    
-    
-  }
+ 
   submit(){
     this.router.navigateByUrl('login/dashboard');
   }
   reset(){
-    DataService.time=null;
+    DataService.departureTimeMin=null;
+    DataService.departureTimeMax=null;
+    DataService.departureTime=null;
     DataService.busType=null;
     DataService.busCondition=null;
     DataService.seatType=null;
     this.router.navigateByUrl('login/dashboard');
+    this.color_reset('btn-light');
+
   }
   
   color_reset(option_reset){
     time_filter = document.getElementsByClassName(option_reset);
-    console.log(time_filter.length,typeof(time_filter));
     for (var i=0; i<time_filter.length ;i++)
-    (<HTMLButtonElement>time_filter[i]).style.background='black';
+    (<HTMLButtonElement>time_filter[i]).style.background='white';
   }
 
 }
