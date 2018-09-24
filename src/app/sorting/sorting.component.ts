@@ -39,13 +39,6 @@ sort_descending(sort_element){
   
 }
 
-
-
-
-
-
-
-
 sortByPropertyAsc = function (property) {
 
   return function (x, y) {
@@ -70,10 +63,6 @@ sortByPropertyAsc = function (property) {
   }
 }  
 
-
-
-
-
 sortByPropertyDesc = function (property) {
 
   return function (x, y) {
@@ -97,10 +86,6 @@ sortByPropertyDesc = function (property) {
 
   }
 }
-
-
-
-
 
 
 }

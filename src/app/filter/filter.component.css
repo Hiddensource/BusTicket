@@ -1,4 +1,4 @@
-#src{
+#src {
     position: relative;
     font: 1em sans-serif;
     font-size: medium;
@@ -7,7 +7,7 @@
     font-weight: 600;
 }
 
-#dst{   
+#dst {
     position: relative;
     font: 1em sans-serif;
     font-size: medium;
@@ -16,14 +16,14 @@
     font-weight: 600;
 }
 
-#arrow{
+#arrow {
     position: relative;
     top: 20px;
     left: 4%;
     font-weight: 100;
 }
 
-#choosen_date{
+#choosen_date {
     position: relative;
     font: 1em sans-serif;
     font-size: medium;
@@ -31,24 +31,29 @@
     left: 10%;
     font-weight: 600;
 }
-#back_button{
+
+#back_button {
     position: relative;
     padding-left: 10%;
     top: 25%;
 }
 
-#back_button_logo{
-    position: relative;    
+#back_button_logo {
+    position: relative;
 }
-.submit_reset{
+
+.submit_reset {
     text-align: center;
 }
-.container{
+
+.container {
     text-align: center;
 }
-.btn-light{
+
+.btn-light {
     background: white;
 }
-hr{
-    border: 1px solid black; 
+
+hr {
+    border: 1px solid black;
 }

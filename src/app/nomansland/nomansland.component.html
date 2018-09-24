@@ -1,24 +1,21 @@
- 
-
-
-
 <div class="container">
-  <div class="row">
-    <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-      <button type="button" class="btn btn-primary" id="modify_button" [routerLink]="['/login']">Modify Search</button>
-    </div>
-    <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
-      <div class="icons">
-        <button type="button" class="btn btn-link" [routerLink]="['/login/dashboard/sorting']">
+    <div class="row">
+        <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+            <button type="button" class="btn btn-primary" id="modify_button" [routerLink]="['/login']">Modify Search</button>
+        </div>
+        <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6'>
+            <div class="icons">
+                <button type="button" class="btn btn-link" [routerLink]="['/login/dashboard/sorting']">
          <i class="fa fa-sort" id= "sort_icon"  style="font-size:24px"></i>
         </button>
-        <button type="button" class="btn btn-link" [routerLink]="['/login/dashboard/filter']" >
+                <button type="button" class="btn btn-link" [routerLink]="['/login/dashboard/filter']">
           <i class="fa fa-filter" id= "filter_icon" style="font-size:24px"></i>
         </button>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
- <img src="src/assets/images/bus.png">
- <div class="nobus"><h2>Oops No Bus Found </h2></div>
-
+<img src="src/assets/images/bus.png">
+<div class="nobus">
+    <h2>Oops No Bus Found </h2>
+</div>
