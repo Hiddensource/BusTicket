@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import {DataService} from 'src/app/services/data.service'
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import {MatTableModule,MatSortModule} from '@angular/material';
-//import {UserService } from './user.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';

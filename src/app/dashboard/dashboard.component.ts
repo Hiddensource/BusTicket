@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   bustype = DataService.busType;
   busDepartureTimeMin =DataService.departureTimeMin;
   busDepartureTimeMax =DataService.departureTimeMax;
-  static counter = 0;
+  
   counter1 = 0;
   
   static dataObj = { };
@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(){
     this.counter1=0;
-    DashboardComponent.counter=0;
+  
     if(DataService.flag == 0)
     {
       this.dataService.postData()
@@ -125,11 +125,6 @@ export class DashboardComponent implements OnInit {
   count12(){
     
     this.counter1 = this.counter1 +1;
-    DashboardComponent.counter = this.counter1;
-    //console.log(DashboardComponent.counter,"dawadswawdesawdaxawd",this.counter1);
-  }
-  count123(){
-    console.log(DashboardComponent.counter,"out");
   }
 
 }
