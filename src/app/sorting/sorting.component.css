@@ -46,3 +46,17 @@
     position: relative;    
     margin-bottom: 1px;
 }
+.row{
+    background-color:white;
+    font-weight: 600;
+}
+.btn-light{
+    background-color:white;
+    border-color:white;
+}
+#sort_heading{
+    font-weight: 800;
+}
+hr{
+    border: 1px solid black; 
+}

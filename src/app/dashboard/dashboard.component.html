@@ -40,25 +40,34 @@
 <div class="container content" >
   <div class="content_data" *ngFor="let user of data">
 
-  <div *ngIf= "user.busCondition == bustype  || bustype== null" >
+  <div *ngIf= "user.busCondition == buscondition  || buscondition== null" >
   <div *ngIf= "user.seatType == seattype  || seattype== null">
+     <div *ngIf= "(user.Filter_busType | uppercase) == bustype || bustype == null || (bustype != 'JAN'  && bustype != 'VOLVO'  && bustype != 'SCANIA')"> 
+        <div *ngIf= "(user.departureHour >= busDepartureTimeMin && user.departureHour <= busDepartureTimeMax) || busDepartureTimeMin == null">
+         
   <div class="row ">
+      <img src = "src/assets/images/bus.png" (load)="count12()" hidden>
     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-6 content_column">
       <div class="row"><b>{{user.TravelsName}}</b></div>
-      <div class="row">{{user.busCondition}}</div>
+      <div class="row">{{user.BusType}}</div>
       <div class="row">{{user.departureTime}}-{{user.ArrivalTime}}({{user.duration}})</div>
     </div>
     <div class="col-xl-4 col-lg-4 col-md-2 col-sm-1 col-1 seats_available">
       {{user.SeatsAvailable}}
     </div>
     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 col-5 price_column">
-      <div >&#8377; {{user.fare}}<button type="button" class="btn btn-link" id="fare_button"  (click)="redirectAggregator(user)"> {{user.Aggregator}}</button></div>
-
-    </div>
+      <div >&#8377; {{user.fare}}</div>
+      <div><button type="button" class="btn btn-link" id="fare_button"  (click)="redirectAggregator(user)"> {{user.Aggregator}}</button></div>
+</div>
+    </div> 
+  </div>
+    
   </div>
 </div>
   </div>
+  
  </div>
+ 
 </div>
      
  

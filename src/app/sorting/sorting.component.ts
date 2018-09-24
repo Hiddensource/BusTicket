@@ -21,7 +21,6 @@ date=DataService.JSONObj.date;
 
   ngOnInit() {
     sort_data = DashboardComponent.dataObj;
-    console.log(sort_data);
   }
  
   sort_ascending(sort_element){
