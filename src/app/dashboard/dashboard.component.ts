@@ -116,7 +116,6 @@ export class DashboardComponent implements OnInit {
     
     
     var res1 = encodeURI(JSON.stringify(bus_json));
-    //uri = encodeURIComponent(bus_json).replace(/'/g,"%27").replace(/"/g,"%22");
     console.log(JSON.stringify(bus_json));
     var url1 = "https://www.goibibo.com/bus/seatlayout?query="+res1;
     window.location.href = url1;

@@ -70,8 +70,6 @@
 
 .content_data {
     background-color: rgb(232, 234, 234);
-    /* padding-top: 5px; */
-    /* padding-bottom: 5px; */
     color: black;
     padding-left: 15px;
     margin-bottom: 9px;
@@ -93,12 +91,6 @@
     text-align: center;
     padding: 0px;
 }
-
-
-/* #fare_button{
-    background-color:rgb(232, 234, 234);
-    border-color: rgb(232, 234, 234);
-} */
 
 .fa-caret-down {
     top: 4px;
@@ -202,4 +194,9 @@
 
 #fare_button {
     text-align: center;
+}
+
+img {
+    padding-top: 180px;
+    padding-left: 30px;
 }
