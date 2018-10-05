@@ -106,7 +106,7 @@ return config;
      
       {
         path: '',
-        component:LoginComponent
+        component:AppComponent
       
             }
 

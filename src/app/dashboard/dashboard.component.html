@@ -39,9 +39,8 @@
 <div class="container content">
     <div class="content_data" *ngFor="let user of data ; let i=index ; let last1 = last">
         <span *ngIf="last1 == true && counter1==0" class="nobus">
-          <img src="src/assets/images/bus.png">
-          <div class="error"><h1>Oops No Bus Found</h1>
-          </div>
+          <img src="src/assets/images/bus.png" (load)="navigate();">
+        
         </span>
         <div *ngIf="user.busCondition == buscondition  || buscondition== null">
             <div *ngIf="user.seatType == seattype  || seattype== null">

@@ -116,7 +116,6 @@ export class DashboardComponent implements OnInit {
     
     
     var res1 = encodeURI(JSON.stringify(bus_json));
-    console.log(JSON.stringify(bus_json));
     var url1 = "https://www.goibibo.com/bus/seatlayout?query="+res1;
     window.location.href = url1;
   }
@@ -124,6 +123,9 @@ export class DashboardComponent implements OnInit {
   count12(){
     
     this.counter1 = this.counter1 +1;
+  };
+  navigate  = function(){
+    this.router.navigateByUrl("/login/nomansland");
   }
 
 }

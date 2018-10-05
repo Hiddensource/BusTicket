@@ -1,7 +1,6 @@
-'use strict'
+'use strict' ;
 import {DataService} from 'src/app/services/data.service'
 import { Component, OnInit } from '@angular/core';
-import{Event, NavigationStart, NavigationEnd} from '@angular/router';
 import {
   AuthService,
   GoogleLoginProvider
@@ -26,8 +25,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.navigateByUrl('login');
     if(sessionStorage.getItem('username')!= null){
-      var btn=<HTMLBodyElement>document.getElementById("btn");
-      btn.innerText=sessionStorage.getItem('username'); 
+      var btn1=<HTMLBodyElement>document.getElementById("btn1");
+      btn1.hidden =false;
+      btn1.innerHTML=sessionStorage.getItem('username'); 
       var logout=<HTMLButtonElement>document.getElementById("Log-out");
       logout.hidden=false;
     }
@@ -43,7 +43,10 @@ export class AppComponent implements OnInit {
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         var btn=<HTMLBodyElement>document.getElementById("btn");
-        btn.innerText=userData.name;
+        btn.hidden=true;
+        var btn1=<HTMLBodyElement>document.getElementById("btn1");
+        btn1.hidden =false;
+        btn1.innerHTML=userData.name;
         var logout=<HTMLAnchorElement>document.getElementById("Log-out");
         logout.hidden=false;
       
@@ -52,10 +55,15 @@ export class AppComponent implements OnInit {
     );
   }
   logout(){
-   
+    var btn=<HTMLBodyElement>document.getElementById("btn");
+    btn.hidden=false;
+    var btn1=<HTMLBodyElement>document.getElementById("btn1");
+    btn1.innerText =null;
+    btn1.hidden =true;
+    var logout=<HTMLAnchorElement>document.getElementById("Log-out");
+    logout.hidden=true;
     sessionStorage.clear();
     this.router.navigateByUrl('login');
-    location.reload();
     
   } 
 
