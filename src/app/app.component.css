@@ -1,6 +1,6 @@
 #btn {
     position: absolute;
-    top: 4px;
+    top: 14px;
     right: 5%;
     height: 40px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -8,15 +8,38 @@
 
 #btn1 {
     position: absolute;
-    top: 4px;
-    right: 5%;
+    top: 14px;
+    right: 7px;
     height: 40px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.list{
+    padding-left: 7px;
+}
+.menu{
+    position: absolute;
+    top :7px;
+    right:2%;
+}
+a{
+    color:#007bff !important;
+    cursor: pointer;
+}
+a:hover{
+    color:rgb(253, 152, 0) !important;
+}
+a:focus{
+        color:rgb(253, 152, 0) !important;
 
-#Log-out {
+}
+ul{
+    left: 22px !important;
+}
+
+
+/* #Log-out {
     position: absolute;
     top: 50px;
     right: 6%;
     color: black;
-}
+} */

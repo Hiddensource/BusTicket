@@ -27,9 +27,9 @@ export class AppComponent implements OnInit {
     if(sessionStorage.getItem('username')!= null){
       var btn1=<HTMLBodyElement>document.getElementById("btn1");
       btn1.hidden =false;
-      btn1.innerHTML=sessionStorage.getItem('username'); 
-      var logout=<HTMLButtonElement>document.getElementById("Log-out");
-      logout.hidden=false;
+      btn1.innerHTML='Hi '+sessionStorage.getItem('username'); 
+      var btn=<HTMLButtonElement>document.getElementById("btn");
+      btn.hidden=true;
     }
   }
 
@@ -46,9 +46,10 @@ export class AppComponent implements OnInit {
         btn.hidden=true;
         var btn1=<HTMLBodyElement>document.getElementById("btn1");
         btn1.hidden =false;
-        btn1.innerHTML=userData.name;
-        var logout=<HTMLAnchorElement>document.getElementById("Log-out");
-        logout.hidden=false;
+        btn1.innerHTML = 'Hi ' + userData.name.toLowerCase().replace(/^(.)|\s(.)/g, ($1) => $1.toUpperCase());
+        sessionStorage.setItem('user', JSON.stringify(userData));
+        // var logout=<HTMLAnchorElement>document.getElementById("Log-out");
+        // logout.hidden=false;
       
         sessionStorage.setItem('username',userData.name);     
       }
@@ -60,12 +61,16 @@ export class AppComponent implements OnInit {
     var btn1=<HTMLBodyElement>document.getElementById("btn1");
     btn1.innerText =null;
     btn1.hidden =true;
-    var logout=<HTMLAnchorElement>document.getElementById("Log-out");
-    logout.hidden=true;
+    // var logout=<HTMLAnchorElement>document.getElementById("Log-out");
+    // logout.hidden=true;
     sessionStorage.clear();
     this.router.navigateByUrl('login');
     
   } 
+  profile() {
+    sessionStorage.setItem('origin',location.href);
+    this.router.navigateByUrl('login/profile');
+  }
 
 }
 

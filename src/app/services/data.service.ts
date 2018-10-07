@@ -18,14 +18,15 @@ export class DataService {
  
   static JSONObj = {"source":" ", "destination": " ", "date": " ", "return_date": " " };
 
-  dataObj = {};
+  
   static splitBusType = [];
   
   static dataSort = { };
   static dataFilter = {};
-
-
+  static userData: any;
+  dataObj = {};
   private url: string;
+  
 
 
   constructor(private http:HttpClient) { 
@@ -47,7 +48,7 @@ export class DataService {
     };
 
 
-    return this.http.post('http://172.16.17.179:3000/getBus', busParameters )
+    return this.http.post('http://192.168.0.100:3000/getBus', busParameters );
   
   }
 

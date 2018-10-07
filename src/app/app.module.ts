@@ -18,8 +18,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 //import { Ng2OrderModule } from 'ng2-order-pipe';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
-import{AuthGuard} from './auth.guard';
+import {AuthGuard} from './auth.guard';
 import {DataTableModule} from "angular-6-datatable";
+
 
 
 
@@ -31,6 +32,7 @@ import {
 import { SortingComponent } from './sorting/sorting.component';
 import { FilterComponent } from './filter/filter.component';
 import { NomanslandComponent } from './nomansland/nomansland.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -56,7 +58,8 @@ return config;
     DashboardComponent,
     SortingComponent,
     FilterComponent,
-    NomanslandComponent
+    NomanslandComponent,
+    ProfileComponent
   ],
   imports: [
     //MatTableModule,
@@ -108,6 +111,10 @@ return config;
         path: '',
         component:AppComponent
       
+            },
+            {
+              path:'login/profile',
+              component : ProfileComponent
             }
 
 
