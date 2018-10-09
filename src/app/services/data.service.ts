@@ -15,7 +15,7 @@ export class DataService {
   static busCondition = null; //ac non ac
   static seatType = null;// sleeper seater semi-seater
   static flag;
- 
+  static url;
   static JSONObj = {"source":" ", "destination": " ", "date": " ", "return_date": " " };
 
   
