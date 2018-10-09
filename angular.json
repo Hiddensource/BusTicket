@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lms": {
+    "bta": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lms",
+            "outputPath": "dist/bta",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lms:build"
+            "browserTarget": "bta:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lms:build:production"
+              "browserTarget": "bta:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lms:build"
+            "browserTarget": "bta:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         }
       }
     },
-    "lms-e2e": {
+    "bta-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -109,11 +109,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lms:serve"
+            "devServerTarget": "bta:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lms:serve:production"
+              "devServerTarget": "bta:serve:production"
             }
           }
         },
@@ -129,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "lms"
+  "defaultProject": "bta"
 }
