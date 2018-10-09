@@ -124,7 +124,7 @@ return config;
             }
 
 
-    ])
+    ],{useHash :true})
     
   ],
 providers: [
