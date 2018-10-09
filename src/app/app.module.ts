@@ -33,6 +33,7 @@ import { SortingComponent } from './sorting/sorting.component';
 import { FilterComponent } from './filter/filter.component';
 import { NomanslandComponent } from './nomansland/nomansland.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SeatBookComponent } from './seat-book/seat-book.component';
 
 
 
@@ -59,7 +60,8 @@ return config;
     SortingComponent,
     FilterComponent,
     NomanslandComponent,
-    ProfileComponent
+    ProfileComponent,
+    SeatBookComponent
   ],
   imports: [
     //MatTableModule,
@@ -115,6 +117,10 @@ return config;
             {
               path:'login/profile',
               component : ProfileComponent
+            },
+            {
+              path:'login/seat-book',
+              component : SeatBookComponent
             }
 
 
