@@ -1,0 +1,26 @@
+<button type="button" class="btn btn-light" id="back_button" (click)='goBack()'><b><i class="fa fa-angle-left"
+      id="back_button_logo" style="font-size:24px"></i></b> </button>
+<br>
+<div class="fluid-container">
+  
+  <div class="row" style="text-align:center;display: block;margin-top: 10px"  ><h1><u>Profile</u></h1></div>
+  <br>
+  
+  <div class="row1 row">
+    <img src={{user.image}} alt="{{user.name}}">
+    <div class="col" style=" margin-top: 30px;">
+      
+       <h3>{{user.name }}    </h3>
+       
+
+    </div></div>
+    <br>
+    <div class="row">
+      <div class="col"> 
+        <h4>Email : {{user.email}}</h4>
+      </div>
+      
+    
+  </div>
+  
+</div>

@@ -1,4 +1,4 @@
-#src{
+#src {
     position: relative;
     font: 1em sans-serif;
     font-size: medium;
@@ -8,7 +8,7 @@
     margin-bottom: 2px;
 }
 
-#dst{   
+#dst {
     position: relative;
     font: 1em sans-serif;
     font-size: medium;
@@ -18,7 +18,7 @@
     margin-bottom: 2px;
 }
 
-#arrow{
+#arrow {
     position: relative;
     top: 20px;
     left: 4%;
@@ -26,7 +26,7 @@
     margin-bottom: 2px;
 }
 
-#choosen_date{
+#choosen_date {
     position: relative;
     font: 1em sans-serif;
     font-size: medium;
@@ -35,14 +35,33 @@
     font-weight: 600;
     margin-bottom: 2px;
 }
-#back_button{
+
+#back_button {
     position: relative;
     padding-left: 10%;
     top: 25%;
     margin-bottom: 2px;
 }
 
-#back_button_logo{
-    position: relative;    
+#back_button_logo {
+    position: relative;
     margin-bottom: 1px;
+}
+
+.row {
+    background-color: white;
+    font-weight: 600;
+}
+
+.btn-light {
+    background-color: white;
+    border-color: white;
+}
+
+#sort_heading {
+    font-weight: 800;
+}
+
+hr {
+    border: 1px solid black;
 }

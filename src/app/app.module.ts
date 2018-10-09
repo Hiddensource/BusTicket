@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import {DataService} from 'src/app/services/data.service'
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import {MatTableModule,MatSortModule} from '@angular/material';
-//import {UserService } from './user.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -20,8 +18,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 //import { Ng2OrderModule } from 'ng2-order-pipe';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
-import{AuthGuard} from './auth.guard';
+import {AuthGuard} from './auth.guard';
 import {DataTableModule} from "angular-6-datatable";
+
 
 
 
@@ -32,6 +31,8 @@ import {
 } from "angular5-social-login";
 import { SortingComponent } from './sorting/sorting.component';
 import { FilterComponent } from './filter/filter.component';
+import { NomanslandComponent } from './nomansland/nomansland.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -56,7 +57,9 @@ return config;
     FooterComponent,
     DashboardComponent,
     SortingComponent,
-    FilterComponent
+    FilterComponent,
+    NomanslandComponent,
+    ProfileComponent
   ],
   imports: [
     //MatTableModule,
@@ -85,7 +88,12 @@ return config;
        component:SortingComponent,
        canActivate: [AuthGuard]
             },
-
+            {
+              path: 'login/nomansland',
+              component:NomanslandComponent,
+                canActivate: [AuthGuard]
+            
+                  },
              {
   path: 'login/dashboard',
   component:DashboardComponent,
@@ -101,8 +109,12 @@ return config;
      
       {
         path: '',
-        component:LoginComponent
+        component:AppComponent
       
+            },
+            {
+              path:'login/profile',
+              component : ProfileComponent
             }
 
 

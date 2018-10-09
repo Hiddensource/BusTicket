@@ -21,7 +21,6 @@ date=DataService.JSONObj.date;
 
   ngOnInit() {
     sort_data = DashboardComponent.dataObj;
-    console.log(sort_data);
   }
  
   sort_ascending(sort_element){
@@ -39,13 +38,6 @@ sort_descending(sort_element){
   this.router.navigateByUrl('login/dashboard');
   
 }
-
-
-
-
-
-
-
 
 sortByPropertyAsc = function (property) {
 
@@ -71,10 +63,6 @@ sortByPropertyAsc = function (property) {
   }
 }  
 
-
-
-
-
 sortByPropertyDesc = function (property) {
 
   return function (x, y) {
@@ -98,10 +86,6 @@ sortByPropertyDesc = function (property) {
 
   }
 }
-
-
-
-
 
 
 }

@@ -1,115 +1,115 @@
 <div class="container">
 
-  <div class="row" style="background-color:white">
+    <div class="row" style="background-color:white">
 
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
-      <button type="button" class="btn btn-light" id="back_button" [routerLink]="['/login/dashboard']"><b><i class="fa fa-angle-left" id="back_button_logo" style="font-size:24px"></i></b> </button>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+            <button type="button" class="btn btn-light" id="back_button" [routerLink]="['/login/dashboard']"><b><i class="fa fa-angle-left" id="back_button_logo" style="font-size:24px"></i></b> </button>
+        </div>
+
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-5 col-7">
+            <span id="src" style="color: #000;">{{source}}</span><i class="fa fa-arrow-right" id="arrow"></i><span id="dst" style="color: #000;">{{destination}}</span>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+            <span id="choosen_date" style="color: #000">{{date}}</span>
+        </div>
+
     </div>
-
-    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-5 col-7">
-      <span id="src" style="color: #000;">{{source}}</span><i class="fa fa-arrow-right" id="arrow"></i><span id="dst" style="color: #000;">{{destination}}</span>
-    </div> 
-
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-      <span id="choosen_date" style="color: #000">{{date}}</span>
-    </div>
-
-  </div>
 
 </div>
 
 
 
-<!-- <br>
 <br>
-<br> -->
+<br>
+<br>
 
 
 
-<div class="container">
+<div class="container ">
 
-  <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
-      Price
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('fare')">
+    <div class="row sorting-row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
+            Price
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('fare')">
         Lowest
       </button>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">      
-      <button type="button" class="btn btn-light" id="sort_filter"(click)="sort_descending('fare')">
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('fare')">
         Highest
       </button>
+        </div>
     </div>
-  </div> 
+    <hr>
 
-
-  <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
-      Duration
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('duration')">
+    <div class="row sorting-row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
+            Duration
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('duration')">
         Min 
       </button>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">      
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('duration')">
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('duration')">
         Max
       </button>
+        </div>
     </div>
-  </div>
+    <hr>
 
-
-  <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
-      Departure
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('departureTime')">
+    <div class="row sorting-row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
+            Departure
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('departureTime')">
         Early
       </button>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">      
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('departureTime')">
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('departureTime')">
         Late
       </button>
+        </div>
     </div>
-  </div>
+    <hr>
 
-
-  <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
-      Arrival
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('ArrivalTime')">
+    <div class="row sorting-row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
+            Arrival
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('ArrivalTime')">
         Early
       </button>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">      
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('ArrivalTime')">
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('ArrivalTime')">
         Late
       </button>
+        </div>
     </div>
-  </div>
 
-
-  <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
-      Seats Availability
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('SeatsAvailable')">
+    <hr>
+    <div class="row sorting-row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="sort_heading">
+            Seats Availability
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_ascending('SeatsAvailable')">
         Low 
       </button>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">      
-      <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('SeatsAvailable')">
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light" id="sort_filter" (click)="sort_descending('SeatsAvailable')">
         High 
       </button>
+        </div>
     </div>
-  </div>
 
-</div>   
+</div>

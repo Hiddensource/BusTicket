@@ -1,57 +1,45 @@
-/* .head{
-          background-color:#01c0c8;
-          width:100%;
-          height:60px;
-      }
-      .bottom{
-          background-color: #d5d5d5;
-          width:100%;
-          height:40px;
-          margin-top: 40px;
-      }
-      .logo{
-          height:80px;
-          width:190px;
-          position: center;
-          color: white;
-          
-          margin-bottom:10px;
-          margin-left:12px;
-         
-      }
-      .title{
-          position:center;
-          text-align: center;
-          color:white;
-          font-size: 24px;
-          font-family:"Poppins";
-          margin-bottom:6px;
-          margin-top:16px;
-      }
-      .middle{
-          border:1px solid black;
-          margin: 80px 400px 100px 400px;
-      }
-      .sign{
-        COLOR: #000000;
-        FONT-FAMILY: Poppins;
-        FONT-SIZE: 24PX;
+#btn {
+    position: absolute;
+    top: 14px;
+    right: 5%;
+    height: 40px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-      }
-       */
-    
-    #btn{
-        position: absolute;
-        top:4px;
-        right:5%;
-        height: 40px;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        
-    }
-    #Log-out{
-        position: absolute;
-        top:50px;
-        right:6%;
-        color: black;
-       
-    }
+#btn1 {
+    position: absolute;
+    top: 14px;
+    right: 7px;
+    height: 40px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.list{
+    padding-left: 7px;
+}
+.menu{
+    position: absolute;
+    top :7px;
+    right:2%;
+}
+a{
+    color:#007bff !important;
+    cursor: pointer;
+}
+a:hover{
+    color:rgb(253, 152, 0) !important;
+}
+a:focus{
+        color:rgb(253, 152, 0) !important;
+
+}
+ul{
+    left: 22px !important;
+}
+
+
+/* #Log-out {
+    position: absolute;
+    top: 50px;
+    right: 6%;
+    color: black;
+} */

@@ -1,0 +1,79 @@
+#src {
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 1%;
+    font-weight: 600;
+}
+
+#dst {
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    left: 6%;
+    font-weight: 600;
+}
+
+#arrow {
+    position: relative;
+    top: 20px;
+    left: 4%;
+    font-weight: 100;
+}
+
+#choosen_date {
+    position: relative;
+    font: 1em sans-serif;
+    font-size: medium;
+    top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#modify_button {
+    position: relative;
+    left: 2%;
+    top: 30px;
+    background-color: rgb(253, 152, 0);
+    border-color: rgb(253, 152, 0);
+    color: #000;
+}
+
+#sort_icon {
+    position: relative;
+    top: 30px;
+    color: #000;
+}
+
+#filter_icon {
+    position: relative;
+    top: 30px;
+    color: #000;
+}
+
+.icons {
+    position: relative;
+    left: 10%;
+}
+
+#back_button {
+    position: relative;
+    padding-left: 10%;
+    top: 25%;
+}
+
+#back_button_logo {
+    position: relative;
+}
+
+img {
+    padding-top: 180px;
+    padding-left: 80px;
+}
+
+.nobus {
+    padding-top: 80px;
+    padding-left: 70px;
+}

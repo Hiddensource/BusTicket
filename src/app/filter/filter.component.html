@@ -1,38 +1,127 @@
 <div class="container">
     <div id="row-2" class="row" style="background-color:white">
-      <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
-        <button type="button" class="btn btn-light" id="back_button" [routerLink]="['/login/dashboard']"><b><i class="fa fa-angle-left" id="back_button_logo" style="font-size:24px"></i></b> </button>
-      </div>
-      <div class="col-xl-7 col-lg-7 col-md-7 col-sm-5 col-7">
-        <span id="src" style="color: #000;">{{source}}</span><i class="fa fa-arrow-right" id="arrow"></i><span id="dst" style="color: #000;">{{destination}}</span>
-      </div> 
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-        <span id="choosen_date" style="color: #000">{{date}}</span>
-      </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+            <button type="button" class="btn btn-light" id="back_button" [routerLink]="['/login/dashboard']"><b><i class="fa fa-angle-left" id="back_button_logo" style="font-size:24px"></i></b> </button>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-5 col-7">
+            <span id="src" style="color: #000;">{{source}}</span><i class="fa fa-arrow-right" id="arrow"></i><span id="dst" style="color: #000;">{{destination}}</span>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+            <span id="choosen_date" style="color: #000">{{date}}</span>
+        </div>
     </div>
-  </div>
-  <br>
-  <br>
-  <br>
-  <div class="container">
-      <div class="row">
-        a
-      </div>
-      <hr>
-      <div class="row">
-        a
-      </div>
-      <hr>
-      <div class="row">
-        a
-      </div>
-      <hr>
-      <div class="row">
-        a
-      </div>
-      <hr>
-      <div class="row">
-        a
-      </div>
-      <hr>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('00-06','time')" id="00-06">
+                00-06
+              </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('06-12','time')" id="06-12">
+                06-12
+              </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('12-18','time')" id="12-18">
+                12-18
+              </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light time" (click)="time_filter_function('18-24','time')" id="18-24">
+                18-24
+              </button>
+        </div>
+
+
     </div>
+    <hr>
+
+    <div class="row">
+
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light busType" (click)="busType_filter('VOLVO','busType')" id="VOLVO">
+            Volvo
+          </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light busType" (click)="busType_filter('JAN','busType')" id="JAN">
+            Janrath
+          </button>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light busType" (click)="busType_filter('SCANIA','busType')" id="SCANIA">
+            Scania
+          </button>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+            <button type="button" class="btn btn-light busType" (click)="busType_filter('other','busType')" id="other">
+            Others
+          </button>
+        </div>
+    </div>
+    <hr>
+
+
+
+
+    <div class="row">
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <button type="button" class="btn btn-light busCondition" (click)="busCondition_filter('ac','busCondition')" id="ac">
+            AC
+          </button>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <button type="button" class="btn btn-light busCondition" (click)="busCondition_filter('nonac','busCondition')" id="nonac">
+            NON AC
+          </button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+            <button type="button" class="btn btn-light seatType" (click)="seatType_filter('Sleeper','seatType')" id="Sleeper">
+              Sleeper
+            </button>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+            <button type="button" class="btn btn-light seatType" (click)="seatType_filter('Seater','seatType')" id="Seater">
+                Seater
+            </button>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+            <button type="button" class="btn btn-light seatType" (click)="seatType_filter('Seater/Sleeper','seatType')" id="Seater/Sleeper">
+                  Seater/Sleeper
+            </button>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="container submit_reset">
+
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <button type="button" class="btn btn-primary" id="filter" (click)="reset()">
+                reset
+            </button>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <button type="button" class="btn btn-primary" id="filter" (click)="submit()">
+                submit
+            </button>
+        </div>
+
+    </div>
+
+
+</div>
