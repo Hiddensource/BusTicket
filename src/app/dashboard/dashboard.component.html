@@ -39,7 +39,7 @@
 <div class="container content">
     <div class="content_data" *ngFor="let user of data ; let i=index ; let last1 = last">
         <span *ngIf="last1 == true && counter1==0" class="nobus">
-          <img src="src/assets/images/bus.png" (load)="navigate();">
+          <img src="./assets/images/bus.png" (load)="navigate();">
         
         </span>
         <div *ngIf="user.busCondition == buscondition  || buscondition== null">
@@ -48,7 +48,7 @@
                     <div *ngIf="(user.departureHour >= busDepartureTimeMin && user.departureHour <= busDepartureTimeMax) || busDepartureTimeMin == null">
 
                         <div class="row ">
-                            <img src="src/assets/images/bus.png" (load)="count12()" hidden>
+                            <img src="./assets/images/bus.png" (load)="count12()" hidden>
                             <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-6 content_column">
                                 <div class="row"><b>{{user.TravelsName}}</b></div>
                                 <div class="row">{{user.BusType}}</div>
