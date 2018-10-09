@@ -48,7 +48,7 @@ export class DataService {
     };
 
 
-    return this.http.post('http://172.16.17.179:3000/getBus', busParameters );
+    return this.http.post('http://172.16.18.190:9900/getBus', busParameters );
   
   }
 
