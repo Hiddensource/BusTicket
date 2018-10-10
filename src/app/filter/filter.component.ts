@@ -72,7 +72,7 @@ date=DataService.JSONObj.date;
     DataService.busType=null;
     DataService.busCondition=null;
     DataService.seatType=null;
-    this.router.navigateByUrl('login/dashboard');
+    //this.router.navigateByUrl('login/dashboard');
     this.color_reset('btn-light');
 
   }
