@@ -39,7 +39,7 @@
 <div class="container content">
     <div class="content_data" *ngFor="let user of data ; let i=index ; let last1 = last">
         <span *ngIf="last1 == true && counter1==0" class="nobus">
-          <img src="./assets/images/bus.png" (load)="navigate();">
+          <img src="./assets/images/bus.png" (load)="navigate();" hidden>
         
         </span>
         <div *ngIf="user.busCondition == buscondition  || buscondition== null">
