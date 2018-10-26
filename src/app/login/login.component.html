@@ -4,14 +4,14 @@
             <div class="row">
                 <div class="form-check">
                     <label class="form-check-label" for="radio1">
-            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked> One-Way
+            <input type="radio" class="form-check-input" id="One-way" name="optradio" value="option1" checked> One-Way
           </label>
                 </div>
             </div>
             <div class="row">
                 <div class="form-check">
                     <label class="form-check-label" for="radio2">
-            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Two-Way
+            <input type="radio" class="form-check-input" id="Two-way" name="optradio" value="option2">Two-Way
           </label>
                 </div>
             </div>
@@ -19,12 +19,12 @@
         <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
             <div class="form-group">
 
-                <input autocomplete="on" placeholder="Source" id="source" class="form-control" required/>
+                <input source_autocomplete="on" placeholder="Source" id="source" class="form-control" required/>
             </div>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
             <div class="form-group">
-                <input autocomplete1="on" placeholder="Destination" id="destination" class="form-control" required/>
+                <input destination_autocomplete="on" placeholder="Destination" id="destination" class="form-control" required/>
             </div>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
@@ -48,13 +48,13 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <span id="h"></span>
+                    <span id="errorBox"></span>
                 </div>
             </div>
         </div>
 
         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col">
-            <input type="submit" class="btn btn-info" value="Search" (click)="validation()" id="submit">
+            <input type="submit" class="btn btn-info" value="Search" (click)="empty_field_validation()" id="searchBus">
         </div>
     </div>
 </div>

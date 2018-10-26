@@ -19,7 +19,7 @@
     top: 15px;
 }
 
-#submit {
+#searchBus {
     position: relative;
     left: 8%;
     top: 15px;
@@ -28,7 +28,7 @@
     color: #000;
 }
 
-#h {
+#errorBox {
     color: red;
 }
 
