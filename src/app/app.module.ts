@@ -9,7 +9,6 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
@@ -55,7 +54,6 @@ return config;
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent,
     DashboardComponent,
     SortingComponent,
     FilterComponent,

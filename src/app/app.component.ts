@@ -28,8 +28,8 @@ export class AppComponent implements OnInit {
       var btn1=<HTMLBodyElement>document.getElementById("btn1");
       btn1.hidden =false;
       btn1.innerHTML='Hi '+sessionStorage.getItem('username'); 
-      var btn=<HTMLButtonElement>document.getElementById("btn");
-      btn.hidden=true;
+      var googleSignIn=<HTMLButtonElement>document.getElementById("googleSignIn");
+      googleSignIn.hidden=true;
     }
   }
 
@@ -42,8 +42,8 @@ export class AppComponent implements OnInit {
     
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
-        var btn=<HTMLBodyElement>document.getElementById("btn");
-        btn.hidden=true;
+        var googleSignIn=<HTMLBodyElement>document.getElementById("googleSignIn");
+        googleSignIn.hidden=true;
         var btn1=<HTMLBodyElement>document.getElementById("btn1");
         btn1.hidden =false;
         btn1.innerHTML = 'Hi ' + userData.name.toLowerCase().replace(/^(.)|\s(.)/g, ($1) => $1.toUpperCase());
@@ -56,8 +56,8 @@ export class AppComponent implements OnInit {
     );
   }
   logout(){
-    var btn=<HTMLBodyElement>document.getElementById("btn");
-    btn.hidden=false;
+    var googleSignIn=<HTMLBodyElement>document.getElementById("googleSignIn");
+    googleSignIn.hidden=false;
     var btn1=<HTMLBodyElement>document.getElementById("btn1");
     btn1.innerText =null;
     btn1.hidden =true;

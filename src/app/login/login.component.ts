@@ -16,6 +16,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class LoginComponent implements OnInit {
 
+  radio_button1 = '';
+
 
   constructor(private router: Router,
     private route: ActivatedRoute,
