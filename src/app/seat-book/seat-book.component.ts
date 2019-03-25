@@ -14,6 +14,7 @@ export class SeatBookComponent implements OnInit {
   ngOnInit() {
 
     this.url = DataService.url;
+    console.log("this.url");
     let redirect_url = <HTMLIFrameElement>document.getElementById("frame");
     redirect_url.src = this.url;
   }
